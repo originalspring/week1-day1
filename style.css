@@ -1,0 +1,113 @@
+header {
+    background-color: tomato;
+    background-image:url("images/central_park.jpg");
+    background-size:1500px;
+    /*background: position 0 -200px;*/
+    height: 350px;
+    padding-left:75px;
+    padding-top: 100px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    color:#ffab33;
+}
+
+li{
+    list-style-type:none;
+    display:inline;
+    padding: 0 20px 15px 20px;/* clock wise*/
+}
+
+a{
+    text-decoration:none;
+}
+
+a:link{
+    color:black;
+}
+
+a:visited{
+    color:#818db3;
+}
+
+a:hover{
+    color:#333;
+}
+
+a:active{
+    color:#753a30;
+}
+
+nav{
+
+    background-color: rgb(255,245,238);
+    height: 50px;
+    text-align:center;
+    padding-top:2px;
+}
+
+main{
+}
+
+main h1 { /*contextual selector */
+    color:rgb(129,141,179);
+    font-family: arial;
+
+}
+ 
+footer {
+    height: 40px;
+    background-color: rgb(129,141,179);
+    text-align:center;
+    padding-top: 20px;
+    color: rgb(129,141,179)
+
+}
+
+/*table 2 styles */
+table{
+margin-top:35px;
+}
+
+table,caption,th,td{/* group selector*/
+    border: 1px solid #000;
+}
+
+th,td{
+    width:150px;
+    height:35px;
+    text-align: center;
+}
+
+caption{
+    text-transform: uppercase;
+    font-weight:600;
+    height:40px;
+    padding-top:0%;
+    color:#753a30;
+    }
+
+label{
+    display:block;
+    margin: 15px 0 0 0;
+}
+
+input{
+ width: 300px;
+
+}
+
+input[name="gender"] {/* attribute selector*/
+    width: 25px;
+}
+
+textarea{
+    width: 300px;
+}
+
+input[type="submit"]{
+    display: block;
+    margin: 20px 0 10px 0;
+    width: 100px;
+}
+
