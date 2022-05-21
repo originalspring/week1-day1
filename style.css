@@ -46,8 +46,6 @@ nav{
     padding-top:2px;
 }
 
-main{
-}
 
 main h1 { /*contextual selector */
     color:rgb(129,141,179);
@@ -111,3 +109,36 @@ input[type="submit"]{
     width: 100px;
 }
 
+main .description{
+    visibility: hidden;
+    position: relative;
+
+}
+
+#album li:hover .description{
+    visibility: visible;
+    position:left, bottom;
+    background-color: white;
+    background-size: 400px 400px;
+    display: block;
+
+}
+
+main #album img {
+    width: 400px;
+  }
+  
+  /* Lab Assignment */
+  main #album li {
+    /*display: inline-block;*/
+    float: left;
+    position: relative;
+  }
+
+  main{margin:50px;}
+
+
+ p .title{
+    text-align: center;
+    text-transform: uppercase;
+}

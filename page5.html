@@ -5,20 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Web Page</title>
-    
     <!-- link external CSS -->
     <link rel="stylesheet" href="style.css">
-   
 </head>
 <body>
     <!-- Container to wrap everything -->
     <div id="container">
-
         <!-- Brand of website -->
         <!--<header style="font-size: 60px; color:#ffab33">My Web Site Brand</header>-->
         <header>My Web Site Brand</header>
-
-
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -27,91 +22,54 @@
                 <li><a href="page3.html">Contact</a></li>
             </ul>
         </nav>
-
         <!-- Main content area -->
         <main>
             <h1>My Fourth Heading</h1>
             <p>My Fourth Paragraph</p>
-
             <ul id="album">
-                <!-- <li id="photo"><img src="images/winterland1.jpg"></li> 
-                <li id="photo"><img src="images/winterland2.jpg"></li>
-                <li id="photo"><img src="images/winterland3.jpg"></li>
-                <li id="photo"><img src="images/winterland4.jpg"></li>
-                <li id="photo"><img src="images/winterland5.jpg"></li>     -->
+                
             </ul>
-       
-
-
-
-
         </main>
-
         <!-- Footer information -->
         <footer>&copy; Copyright 2022  My Website Name</footer>
-
     </div>
     <!-- End Container -->
-
      <!-- Javascript for gallery -->
      <script>
          var photos = [];//empty array
-      
          var fileNames = []; //empty array
          var imageList = [];
          var image;
-
-        
+         var titleList = [];
          var title;
-         var photoname = ["photoname1", "photoname2", "photoname3",
-         "photoname4","photoname5", "photoname6"];
-         var titleOpenList="<p id='title'>";
-         var titleCloseList="</p>"
-
+         var photoname = ["photoname1", "photoname2", "photoname3","photoname4","photoname5", "photoname6"];
          var openList1 = "<li id='photo"
          var openList2 = "'>"; //Declare a variable to contain open list tag
          var closeList = "</li>"; //Declare a variable to contain an close list tag
-
-
-         
-        
-
-
-//          <var openDesc = "<div class='description'>";
-//          var closeDesc = "</div>";
-//             var descText = [
-//              "A beautiful winter scenery in the morning",
-//             "After an overnight snowstorm",
-//              "Snowy drive on the road",
-//             "Snow day in the country",
-//      "Burrrrr...a typical cold in January",
-//     "Cold, snowy but sunny and beautiful"
-//   ] 
-
-
-
+         var titleOpenList="<p class='title'>";
+         var titleCloseList="</p>"
+         var openDesc = "<div class='description'>";
+         var closeDesc = "</div>";
+            var descText = [
+             "A beautiful winter scenery in the morning",
+            "After an overnight snowstorm",
+             "Snowy drive on the road",
+            "Snow day in the country",
+     "Burrrrr...a typical cold in January",
+    "Cold, snowy but sunny and beautiful"
+  ]
          //Create a loop to create 6 images
          for (var i=0; i<6; i++){
             fileNames.push("winterland" +(i+1));
-            photos.push("<img src='images/" + fileNames[i] + '.jpg>');
-
-         title = titleOpenList + photoname[i] + titleCloseList;
-         image = openList + photos[i]+ "<br>" + title + closeList;
-
-        
-
-        // image = openList1 + (i+1) + openList2 + photos[i] + "<br>" + 
-        // titleOpenList + captionText[i] + titleCloseList + openDesc + descText[i] + closeDesc + closeList; 
-           
-
-
-
+            photos.push("<img src='images/" + fileNames[i] + ".jpg'>");
+            // title = titleOpenList + photoname[i] + titleCloseList;
+           // image = openList + photos[i]+ "<br>" + title + closeList;
+            image = openList1 + (i+1) + openList2 + photos[i] + "<br>" +
+            titleOpenList + photoname[i] + titleCloseList + openDesc + descText[i] + closeDesc + closeList;
+            
             imageList.push(image);
          }
-
          document.getElementById("album").innerHTML = imageList;
-
-      
      </script>
 </body>
 </html>
